@@ -1,0 +1,114 @@
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+    color: rgba(0,0,0,.8);
+    background-color: #f7f8fa;
+
+
+}
+ul,li{ list-style: none; padding: 0; margin: 0;}
+
+
+/*Layout*/
+.main_header {
+    overflow: hidden;
+    background: #fff;
+    border-bottom: 1px solid rgba(30,35,42,.06);
+    box-shadow: 0 1px 3px 0 rgba(51, 106, 175, 0.05);
+    background-clip: content-box;
+    margin: 0 0 24px 0;
+}
+.container{ width: 640px; margin: 0 auto;}
+
+.main_header .nav{width: 720px; margin: 0 auto; height: 48px;display: flex;flex-flow: row nowrap;justify-content:space-between;align-items:center;box-sizing: border-box;}
+.nav a,.nav a:link,.nav a:visited{ color: #71777c; text-decoration: none;}
+.nav a:hover{ color: #007fff !important;}
+
+.card {
+    margin-bottom: 10px;
+    background: #fff;
+    border: 1px solid #e7eaf1;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,37,55,.05);
+    box-sizing: border-box;
+}
+.items{ padding: 32px; font-size: 14px;}
+.items li{ margin: 0 0 40px 0}
+.items .title{  font-size: 14px; color: #111;text-decoration: none; font-weight: bold;}
+.items .meta{  font-size: 12px; color: #71777c}
+.items .summary{  font-size: 12px;color: #71777c; margin: 8px 0}
+
+.items a.title:hover{ color: #007fff;}
+.meta a,.meta a:link,.meta a:visited{ color: #71777c; text-decoration: none; margin: 0 4px}
+.meta a:hover{ color: #007fff;}
+
+
+/*pop*/
+.ant_input {
+  box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    padding: 4px 7px;
+    width: 100%;
+    height: 32px;
+    cursor: text;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #e9e9e9;
+    border-radius: 3px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.ant_input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(81,176,99,.2);
+}
+.ant_input:focus, .ant_input:hover {
+    border:1px solid #7bc388;
+}
+.bmtitle{font-size: 14px; font-weight: bold;}
+.form_item{ padding: 8px 0;}
+.ant_btn {
+    display: inline-block;
+    position: relative;
+    z-index: 199;
+    line-height: 30px;
+    height: 40px;
+    border-radius: 2px 2px;
+    font-weight: 400;
+    font-size: 16px;
+    outing: none;
+    cursor: pointer;
+    padding: 0 14px;
+    width: 100%;
+}
+.ant_btn_primary {
+    border: 1px solid #51b063;
+    background: #51b063;
+    color: #fff;
+}
+.ant_btn, .ant_btn:active, .ant_btn:focus {
+    outline: 0;
+}
+
+.form{ padding: 16px; font-size: 14px;}
+.form li{ margin: 0 0 8px 0}
+.form .title{ color: #999; font-size: 12px;font-weight: 700;}
+.form .desc{ font-size: 14px; color: #999999}
+
+
+
+@media screen and (max-width: 667px) {
+  .main_header .nav{max-width: 100%; padding: 0 16px;box-sizing: border-box;}
+  .container{ max-width: 100%; box-sizing: border-box;}
+  .card{ border-radius: 0;border: none;}
+}

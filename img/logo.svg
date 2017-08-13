@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="176px" height="62px" viewBox="0 0 176 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="97.7240115%" id="linearGradient-1">
+            <stop stop-color="#33C75B" offset="0%"></stop>
+            <stop stop-color="#0CAE28" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-44.000000, -275.000000)">
+            <g id="Group-2" transform="translate(44.000000, 275.000000)">
+                <rect id="Rectangle-Copy-2" fill="#FFFFFF" x="0" y="0" width="176" height="62"></rect>
+                <rect id="Rectangle-2" fill="url(#linearGradient-1)" transform="translate(30.596407, 31.596407) rotate(-42.000000) translate(-30.596407, -31.596407) " x="14.5964069" y="15.5964069" width="32" height="32" rx="4"></rect>
+                <text id="Delicious" font-family="Helvetica-Bold, Helvetica" font-size="26" font-weight="bold" letter-spacing="-1" fill="#3D3D3D">
+                    <tspan x="60" y="41">Deliciou</tspan>
+                    <tspan x="153.130859" y="41">s</tspan>
+                </text>
+                <g id="Group" transform="translate(23.000000, 23.000000)" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round">
+                    <path d="M1,16 L1,0" id="Line"></path>
+                    <path d="M8,16 L8,4" id="Line"></path>
+                    <path d="M15,16 L15,8" id="Line-Copy"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
