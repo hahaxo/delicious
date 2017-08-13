@@ -44,7 +44,6 @@ class User
     "PASSWORD" => sha1($this->password)
     ]);
     return $result;
-
   }
 
 

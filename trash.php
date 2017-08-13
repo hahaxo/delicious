@@ -16,12 +16,3 @@ $title=$_GET["title"];
     <div class='meta'>$data['TIME']<span></div>
     <div class='summary'>$data['DESCRIPTION']</div>
 </li>"
-
-
-
-<?php
-
-
-
-
-?>
