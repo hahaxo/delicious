@@ -29,7 +29,6 @@ if (isset($_GET['action'])&&$_GET['action']=='logout') {
   session_start();
   session_unset();//free all session variable
   session_destroy();//销毁一个会话中的全部数据
-
 }
 
 ?>
