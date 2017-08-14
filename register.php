@@ -1,19 +1,27 @@
-<?php include('header.php');require 'user.class.php';?>
+<?php include('header.php');?>
 <?php
+$GLOBALS['register']['form']='';
 
-if (!empty($_POST["username"])&&!empty($_POST["password"])) {
-  $u = new User($_POST["username"],$_POST["password"]);
-  if ($u->register()) {
-    $fb= "注册成功";
-    redirect('/delicious/index.php');
-  } else {
-    $fb = '注册失败，用户名重复';
-
-  }
+if (empty($_POST['username'])||empty($_POST['password'])) {
+  $GLOBALS['register']['form'] = '请填写完整';
 } else {
-  $fb =  "请填写完整表单";
+  $u = User::getByUsername($_POST['username']);
+
+  if ($u->password) {
+    $GLOBALS['register']['form'] = '用户名已存在';
+  } else {
+    $u->username=$_POST['username'];
+    $u->password=$_POST['password'];
+    $u->save();
+    $GLOBALS['register']['form'] = '注册成功';
+  }
+
 }
 ?>
+
+<?php
+?>
+
 
   <div class="container">
     <div class="card">
@@ -21,12 +29,8 @@ if (!empty($_POST["username"])&&!empty($_POST["password"])) {
       <form action="" method="post">
 
 
-      <ul class="form"><h2>Register</h2><div><?php
-      if (isset($_POST['submit'])) {
-        # code...
-        echo $fb;
-      }
-       ?> </div>
+      <ul class="form"><h2>Register</h2>
+        <div><?php if (!empty($_POST['submit'])) {echo $GLOBALS['register']['form'];} ?></div>
         <li>
           <div class="form_item">
           <input type="text" name="username" value="<?php if (isset($_POST['submit'])) {echo $_POST["username"];} ?>" placeholder="Username" class="ant_input">
