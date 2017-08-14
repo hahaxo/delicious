@@ -1,23 +1,31 @@
+<?php include('header.php');?>
 <?php
-include('header.php');
-?>
-<?php
+$GLOBALS['login']['form']='';
 
-if (!empty($_POST["username"])&&!empty($_POST["password"])) {
-  $u = new User($_POST["username"],$_POST["password"]);
-  if ($u->login()) {
-    $fb= "登录成功";
-    redirect('/delicious/index.php?username='.$_POST["username"]);
-  } else {
-    $fb = '登录失败，请检查用户名或密码';
+if (isset($_GET['action'])&&$_GET['action']=='login') {
 
-  }
+if (empty($_POST['username'])||empty($_POST['password'])) {
+  $GLOBALS['login']['form'] = '请填写完整';
 } else {
-  $fb =  "请填写完整表单";
+  $u = User::getByUsername($_POST['username']);
+
+  if ($u->password) {
+      if ($u->password == sha1($_POST['password'])) {
+        # code...
+        echo "ok";
+      } else {
+        # code...
+        $GLOBALS['login']['form'] = '密码错误';
+      }
+  } else {
+    $GLOBALS['login']['form'] = '用户名不存在';
+  }
+
 }
 
+}
 //注销登录状态
- if(@$_GET['action'] == "logout"){
+if (isset($_GET['action'])&&$_GET['action']=='logout') {
   session_start();
   session_unset();//free all session variable
   session_destroy();//销毁一个会话中的全部数据
@@ -31,17 +39,11 @@ if (!empty($_POST["username"])&&!empty($_POST["password"])) {
   <div class="container">
     <div class="card">
 
-      <form action="" method="post">
+      <form action="?action=login " method="post">
 
 
-      <ul class="form"><h2>Login</h2><div>
-        <?php
-        if (isset($_POST['submit'])) {
-          # code...
-          echo $fb;
-        }
-         ?>
-      </div>
+      <ul class="form"><h2>Login</h2>
+      <div><?php if (isset($_POST['submit'])) {echo $GLOBALS['login']['form'];} ?></div>
         <li>
           <div class="form_item">
           <input type="text" name="username" value="<?php if (isset($_POST['submit'])) {echo $_POST["username"];} ?>" placeholder="Username" class="ant_input">

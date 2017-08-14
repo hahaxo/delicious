@@ -19,10 +19,6 @@ if (empty($_POST['username'])||empty($_POST['password'])) {
 }
 ?>
 
-<?php
-?>
-
-
   <div class="container">
     <div class="card">
 
@@ -30,7 +26,7 @@ if (empty($_POST['username'])||empty($_POST['password'])) {
 
 
       <ul class="form"><h2>Register</h2>
-        <div><?php if (!empty($_POST['submit'])) {echo $GLOBALS['register']['form'];} ?></div>
+        <div><?php if (isset($_POST['submit'])) {echo $GLOBALS['register']['form'];} ?></div>
         <li>
           <div class="form_item">
           <input type="text" name="username" value="<?php if (isset($_POST['submit'])) {echo $_POST["username"];} ?>" placeholder="Username" class="ant_input">
