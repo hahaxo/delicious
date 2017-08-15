@@ -104,6 +104,19 @@ class User
 
   }
 
+  public static function autoLogin()
+  {
+    global $database;
+    $user = new User();
+    $user->username = @$_COOKIE['username'];
+    $user->password = @$_COOKIE['password'];
+    $result = $database->has("user", ["AND" =>[ "USERNAME" => $user->username, "PASSWORD" => sha1($user->password)]]);//Return: [boolean] 返回 TRUE 或者 FALSE.
+    if ($result) {
+      $_SESSION['username'] = $_POST['username'];
+      $_SESSION['access'] = true;
+    }
+  }
+
 
   public static function validateEmail($email)
   {
