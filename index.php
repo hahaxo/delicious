@@ -12,8 +12,19 @@ echo time().'<br>';
 
 $userName = 'z';
 
-echo 'cookie是：'.@$_COOKIE['username'].'<br>';
-echo 'session是：'.@$_SESSION['username'].'<br>';
+echo 'cookie是：'.@$_COOKIE['username'].'<br/>';
+echo 'session是：'.@$_SESSION['username'].'<br/>-------<br/>';
+var_dump($_SESSION);
+echo "<br/>-------<br/>";
+var_dump($_COOKIE);
+echo "<br/>-------<br/>";
+echo @$_SESSION['access'];
+if (@$_SESSION['access']) {
+  # code...
+  echo "ok";
+}else {
+  echo "no";
+}
 
 // if (User::check()) {
 //   # code...

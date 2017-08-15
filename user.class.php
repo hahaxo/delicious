@@ -96,14 +96,10 @@ class User
     return $result;
   }
 
-  public static function check()
+  public static function auth()
   {
-    if (!empty($_SESSION['username']) and !empty($_SESSION['password'])  ) {
-       return true;
-    } else {
-          redirect('/delicious/login.php');
-
-
+    if (!isset($_SESSION['access'])||$_SESSION['access']!=true) {
+      redirect('login.php');
     }
 
   }

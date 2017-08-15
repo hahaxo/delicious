@@ -2,6 +2,7 @@
 <?php
 $GLOBALS['login']['form']='';
 
+//登录,设置 session，跳转首页
 if (isset($_GET['action'])&&$_GET['action']=='login') {
 
 if (empty($_POST['username'])||empty($_POST['password'])) {
@@ -11,10 +12,13 @@ if (empty($_POST['username'])||empty($_POST['password'])) {
 
   if ($u->password) {
       if ($u->password == sha1($_POST['password'])) {
-        # code...
-        echo "ok";
+        $_SESSION['username'] = $_POST['username'];
+        $_SESSION['access'] = true;
+        //密码验证通过，设置cookies，把用户名和密码保存在客户端
+    		setcookie('username',$_POST['username'],time()+60*60*24*30*6);//设置时效6个月,6个月后这个cookie失效
+    		setcookie('password',sha1($_POST['password']),time()+60*60*24*30*6);
+        redirect('index.php');
       } else {
-        # code...
         $GLOBALS['login']['form'] = '密码错误';
       }
   } else {
@@ -24,11 +28,12 @@ if (empty($_POST['username'])||empty($_POST['password'])) {
 }
 
 }
-//注销登录状态
+//注销登录状态,跳转首页
 if (isset($_GET['action'])&&$_GET['action']=='logout') {
-  session_start();
   session_unset();//free all session variable
   session_destroy();//销毁一个会话中的全部数据
+  setcookie('password');
+  redirect('index.php');
 }
 
 ?>

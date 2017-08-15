@@ -1,7 +1,8 @@
-<?php include('header.php');User::check();
-$title=$_GET["title"];
-$url=$_GET["url"];
-$desc=$_GET["description"];
+<?php include('header.php');
+User::auth();
+@$title=$_GET["title"];
+@$url=$_GET["url"];
+@$desc=$_GET["description"];
 
 ?>
   <div class="container">
