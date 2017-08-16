@@ -1,41 +1,26 @@
-<?php
-include('header.php');
+<?php include('header.php');
+
+$datas = $database->select("bookmark", "*",["ORDER" => ["BID" => "DESC"]]);
+
 ?>
 <div class="container">
 <div class="card">
 <ul class="items">
-  <div class="">
-    index
-    <?php
-// $u = new User('admin','password');
-echo time().'<br>';
-
-$userName = 'z';
-
-echo 'cookie是：'.@$_COOKIE['username'].'<br/>';
-echo 'session是：'.@$_SESSION['username'].'<br/>-------<br/>';
-var_dump($_SESSION);
-echo "<br/>-------<br/>";
-var_dump($_COOKIE);
-echo "<br/>-------<br/>";
-echo @$_SESSION['access'];
-if (@$_SESSION['access']) {
-  # code...
-  echo "ok";
-}else {
-  echo "no";
-}
-
-// if (User::check()) {
-//   # code...
-//   echo "s 存在".$_GET['username'];
-// } else {
-//   # code...
-//   echo "s 不存在";
-// }
-
-     ?>
-  </div>
+  <?php
+  foreach($datas as $data)
+  {
+    echo '<li><a href="'.$data["URL"].'" class="title" target="_blank">';
+    echo $data["TITLE"];
+    echo '</a>';
+    echo '<div class="meta">';
+    echo $data["TIME"];
+    echo '</div>';
+    echo '<div class="summary">';
+    echo $data["DESCRIPTION"];
+    echo '</div>';
+    echo '</li>';
+  }
+   ?>
 </ul>
 </div>
 </div>
