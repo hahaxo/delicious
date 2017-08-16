@@ -18,11 +18,11 @@
       <?php
         if (isset($_SESSION['username'])) {
           # code...
-          echo $_SESSION['username'];
+          echo "<a href='?username=".$_SESSION['username']."'>".$_SESSION['username'].'</a>' .'&nbsp;&nbsp;';
           echo "<a href='login.php?action=logout'>logout</a>";
         } else {
           # code...
-          echo "<a href='login.php'>log in</a>";
+          echo "<a href='login.php'>login</a>";
         }
 
       ?>

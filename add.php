@@ -12,18 +12,12 @@ User::auth();
 
       <ul class="form">
         <li>
-          <div class="title">
-            Bookmark
-          </div>
           <div class="form_item bmtitle">
             <?php echo $title; ?>
           </div>
 
         </li>
         <li>
-          <div class="title">
-            Description
-          </div>
 
           <div class="form_item">
             <input type="text" name="description" value="<?php echo $desc; ?>" placeholder="Description" class="ant_input">
