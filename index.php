@@ -1,19 +1,26 @@
 <?php include('header.php');
 
-$datas = $database->select("bookmark", "*",["ORDER" => ["BID" => "DESC"]]);
+if (isset($_GET['username'])) {
+  $username=$_GET['username'];
+
+}else {
+  $username='*';
+}
+$b = new Bookmark();
+$bookmaks=$b->getBookmark($username);
 
 ?>
 <div class="container">
 <div class="card">
 <ul class="items">
   <?php
-  foreach($datas as $data)
+  foreach($bookmaks as $data)
   {
     echo '<li><a href="'.$data["URL"].'" class="title" target="_blank">';
     echo $data["TITLE"];
     echo '</a>';
     echo '<div class="meta">';
-    echo $data["TIME"];
+    echo $data["TIME"].' | '.$data["AUTHOR"];
     echo '</div>';
     echo '<div class="summary">';
     echo $data["DESCRIPTION"];

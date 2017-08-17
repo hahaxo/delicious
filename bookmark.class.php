@@ -24,11 +24,16 @@ class Bookmark
     return $this->$name = $value;
   }
 
-  public function getBookmark($value='')
+  public function getBookmark($username)
   {
     # code...
     global $database;
-    $datas = $database->select("bookmark", "*",["ORDER" => ["BID" => "DESC"]]);
+    //return $datas = $database->select("bookmark", "*",["AUTHOR" => "yangpeiyuan","ORDER" => ["BID" => "DESC"]]);
+    if ($username!='*') {
+      return $datas = $database->select("bookmark", "*",["AUTHOR" => $username,"ORDER" => ["BID" => "DESC"]]);
+    } else {
+      return $datas = $database->select("bookmark", "*",["ORDER" => ["BID" => "DESC"]]);
+    }
 
   }
 
