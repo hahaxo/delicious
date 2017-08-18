@@ -2,7 +2,7 @@
 require 'common.php';
 session_start();
 User::auth();
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])&&!empty($_POST["title"])&&!empty($_POST["url"])) {
   # code...
   $description=$_POST["description"];
   $title=$_POST["title"];
@@ -20,5 +20,5 @@ if (isset($_POST['submit'])) {
 
 } else {
   # code...
-  echo 'submit is false';
+  echo 'submit is false,has field empty';
 }

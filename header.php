@@ -1,32 +1,15 @@
 <?php require 'common.php';session_start();?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Delicious Bookmark</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-<header class="main_header">
-  <div class="nav">
-    <div class="logo"><a href="/delicious"><img src="img/logo.svg" alt="delicious" ></a></div>
-    <div class="menu">
-      <?php
-        if (isset($_SESSION['username'])) {
-          # code...
-          echo "<a href='?username=".$_SESSION['username']."'>".$_SESSION['username'].'</a>' .'&nbsp;&nbsp;&nbsp;&nbsp;';
-          echo "<a href='login.php?action=logout'>logout</a>";
-        } else {
-          # code...
-          echo "<a href='login.php'>login</a>";
-        }
 
-      ?>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Delicious Bookmark</title>
+  <!-- WEUI CSS -->
+  <link rel="stylesheet" href="http://res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-    </div>
-  </div>
-</header>
+<body>

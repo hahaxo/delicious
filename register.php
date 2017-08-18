@@ -19,33 +19,36 @@ if (empty($_POST['username'])||empty($_POST['password'])) {
 }
 ?>
 
-  <div class="container">
-    <div class="card">
-
-      <form action="" method="post">
 
 
-      <ul class="form"><h2>Register</h2>
-        <div><?php if (isset($_POST['submit'])) {echo $GLOBALS['register']['form'];} ?></div>
-        <li>
-          <div class="form_item">
-          <input type="text" name="username" value="<?php if (isset($_POST['submit'])) {echo $_POST["username"];} ?>" placeholder="Username" class="ant_input">
+  <!-- container -->
+<div class="container">
+  <!-- page hd -->
+  <header class="page_hd"><a href="index.php"><img src="img/logo.svg" alt="logo"></a></header>
+  <!-- page bd -->
+  <div class="page_bd">
+    <form action="" method="post">
+      <div class="weui-cells__title"><?php if (isset($_POST['submit'])) {echo $GLOBALS['register']['form'];} ?></div>
+      <div class="weui-cells">
+          <div class="weui-cell">
+              <div class="weui-cell__bd">
+                  <input class="weui-input" type="text" placeholder="Email" name="username" value="<?php if (isset($_POST['submit'])) {echo $_POST['username'];} ?>">
+              </div>
           </div>
-          <div class="form_item">
-          <input type="password" name="password" value="" placeholder="Password" class="ant_input">
+          <div class="weui-cell">
+              <div class="weui-cell__bd">
+                  <input class="weui-input" type="password" placeholder="Password" name="password">
+              </div>
           </div>
-        </li>
+        </div>
+        <div class="weui-btn-area">
+              <input type="submit" name="submit" value="Register" class="weui-btn weui-btn_primary">
+        </div>
 
-
-        <li>
-          <div class="form_item">
-            <input type="submit" name="submit" value="Submit" class="ant_btn ant_btn_primary">
-          </div>
-        </li>
-      </ul>
-      </form>
-    </div>
+        <div class="weui-loadmore"><span class="weui-loadmore__tips"><a href="login.php">Login</a></span></div>
+    </form>
   </div>
+</div>
 
 
 

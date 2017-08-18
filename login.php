@@ -38,36 +38,36 @@ if (isset($_GET['action'])&&$_GET['action']=='logout') {
 
 ?>
 
-
-
+  <!-- container -->
   <div class="container">
-    <div class="card">
 
-      <form action="?action=login " method="post">
+  <!-- page hd -->
+  <header class="page_hd"><a href="index.php"><img src="img/logo.svg" alt="logo"></a></header>
+  <!-- page bd -->
+  <div class="page_bd">
+<form action="?action=login" method="post">
+  <div class="weui-cells__title"><?php if (isset($_POST['submit'])) {echo $GLOBALS['login']['form'];} ?></div>
+    <div class="weui-cells">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="text" placeholder="Email" name="username" value="<?php if (isset($_POST['submit'])) {echo $_POST['username'];} ?>">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="password" placeholder="Password" name="password">
+                    </div>
+                </div>
+      </div>
+      <div class="weui-btn-area">
+            <input type="submit" name="submit" value="Login" class="weui-btn weui-btn_primary">
+      </div>
 
-
-      <ul class="form"><h2>Login</h2>
-      <div><?php if (isset($_POST['submit'])) {echo $GLOBALS['login']['form'];} ?></div>
-        <li>
-          <div class="form_item">
-          <input type="text" name="username" value="<?php if (isset($_POST['submit'])) {echo $_POST["username"];} ?>" placeholder="Username" class="ant_input">
-          </div>
-          <div class="form_item">
-          <input type="password" name="password" value="" placeholder="Password" class="ant_input">
-          </div>
-        </li>
-
-
-        <li>
-          <div class="form_item">
-            <input type="submit" name="submit" value="Submit" class="ant_btn ant_btn_primary">
-          </div>
-        </li>
-      </ul>
-      </form>
-    </div>
+  <div class="weui-loadmore"><span class="weui-loadmore__tips"><a href="register.php">Register</a></span></div>
+</form>
   </div>
 
+  </div>
 
 
 <?php include('footer.php') ?>

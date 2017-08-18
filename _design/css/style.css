@@ -1,20 +1,73 @@
-/*body{ background-color: #f2f3f4;}*/
-#login .container{ width: 360px; margin: auto;}
-#add .container{ width: auto; margin: auto;}
-.page_hd{ line-height: 0; text-align: center;margin: 40px 0}
+/*Common*/
+body {
+  background-color: #f2f3f4;
+}
+
+/*Link*/
+.card a,.card a:visited{color: #586C94;text-decoration: none;}
+.card a:hover{text-decoration: underline;}
+.nav a,.nav a:visited{color: #586C94;text-decoration: none;}
+.nav a:hover{text-decoration: underline;}
+.main_footer a,.main_footer a:visited{color: #586C94;text-decoration: none;}
+.main_footer a:hover{text-decoration: underline;}
 
 
+/*Layout*/
+.container {
+  max-width: 640px;
+  margin: auto;
+}
 
+.page_hd {
+  line-height: 0;
+  text-align: center;
+  margin: 40px 0
+}
+
+.main_footer{
+  padding-top: 40px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #999;
+}
+
+/*main_header*/
 .main_header {
-    overflow: hidden;
-    background: #fff;
-    border-bottom: 1px solid rgba(30,35,42,.06);
-    box-shadow: 0 1px 3px 0 rgba(51, 106, 175, 0.05);
-    background-clip: content-box;
-    margin: 0 0 24px 0;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  margin: 0 0 24px 0;
+}
+
+.main_header .nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.main_header .nav .logo {}
+.main_header .nav .menu {}
+.main_header .nav .logo img {
+  line-height: 0;
+  font-size: 0;
+  display: block;
+  height: 32px
 }
 
 
-.main_header .nav{width: 30%; margin: 0 auto; height: 48px;display: flex;flex-flow: row nowrap;justify-content:space-between;align-items:center;box-sizing: border-box;}
-.nav a,.nav a:link,.nav a:visited{ color: #71777c; text-decoration: none;}
-.nav a:hover{ color: #007fff !important;}
+/*Componets*/
+.card {
+  background: #FFFFFF;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+/*Rewrite weui*/
+.weui-panel{ background-color: transparent;}
+.weui-media-box{ padding: 16px 24px;}
+.weui-media-box__info{ margin-top:8px;}
+.weui-media-box__desc{-webkit-line-clamp:4}
+
+/*Responsive Layout*/

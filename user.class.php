@@ -47,55 +47,6 @@ class User
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  public function register()
-  {
-    global $database;
-    $result = $database->has("user", ["USERNAME" => $this->username]);
-
-    if ($result==false) {
-      $database->insert("user", [
-      "USERNAME" => $this->username,
-      "PASSWORD" => sha1($this->password)
-      ]);
-      return true;
-    }else {
-      return false;
-    }
-
-  }
-
-
-  public function login()
-  {
-    global $database;
-    $result = $database->has("user", ["AND" =>[ "USERNAME" => $this->username, "PASSWORD" => sha1($this->password)]]);
-    $_SESSION['username'] = $this->username;
-    $_SESSION['password'] = $this->password;
-    setcookie('username',$this->username,time()+60*60*24*30*6);//设置时效6个月
-    setcookie('password',$this->password,time()+60*60*24*30*6);//设置时效6个月
-    return $result;
-  }
-
   public static function auth()
   {
     if (!isset($_SESSION['access'])||$_SESSION['access']!=true) {
@@ -122,21 +73,6 @@ class User
   {
     return filter_var($email,FILTER_VALIDATE_EMAIL);
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
