@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 2017-08-14 09:37:20
+-- Generation Time: 2017-08-18 11:51:40
 -- 服务器版本： 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -44,9 +44,8 @@ CREATE TABLE `bookmark` (
 --
 
 INSERT INTO `bookmark` (`BID`, `URL`, `TITLE`, `DESCRIPTION`, `AUTHOR`, `TIME`) VALUES
-(1, 'http://wulfric.me/about/', 'About', 'DES', 'yangpeiyuan', '2017-08-08 06:01:07'),
-(2, 'https://mp.weixin.qq.com/s/CctuE0Tw9GT3eckn4Of0uw', '做大哥的样子', '', 'yangpeiyuan', '2017-08-08 06:04:11'),
-(3, 'http://www.jianshu.com/p/aa2f885ba871', '深入浅出javascript对象原型 - 简书', '图文并茂的帮助你更好的理解JavaScript原型.熟记并理解以下规则,保你深入理解对象原型,保你面试无忧.', 'yangpeiyuan', '2017-08-08 06:04:50');
+(1, 'https://www.taskade.com/', 'Taskade', 'Taskade is a collaborative space for your ideas goals and daily tasks', 'hahaxo@126.com', '2017-08-18 09:48:35'),
+(2, 'http://designguidelines.co/', 'Design Guidelines — The way products are built.', 'The way products are built\r\n\r\n', 'hahaxo@126.com', '2017-08-18 09:50:26');
 
 -- --------------------------------------------------------
 
@@ -66,13 +65,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`ID`, `USERNAME`, `PASSWORD`, `TIME`) VALUES
-(1, 'hahaxo1@126.com', '45c596f6de46192d73475363156fbed2454b10d6', '2017-08-02 08:39:36'),
-(2, 'hahaxo2@126.com', '45c596f6de46192d73475363156fbed2454b10d6', '2017-08-03 07:45:49'),
-(3, 'hahaxo3@126.com', '45c596f6de46192d73475363156fbed2454b10d6', '2017-08-03 07:46:04'),
-(4, 'hahaxo4@126.com', '45c596f6de46192d73475363156fbed2454b10d6', '2017-08-03 07:46:43'),
-(5, 'hahaxo5@126.com', '45c596f6de46192d73475363156fbed2454b10d6', '2017-08-03 07:46:51'),
-(19, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2017-08-03 13:01:01'),
-(20, 'admin1', '6c7ca345f63f835cb353ff15bd6c5e052ec08e7a', '2017-08-03 13:06:55');
+(1, 'hahaxo@126.com', '2e3c0feeabaeb595f91f6dcc1639939ea012c490', '2017-08-18 09:44:44');
 
 --
 -- Indexes for dumped tables
@@ -98,12 +91,12 @@ ALTER TABLE `user`
 -- 使用表AUTO_INCREMENT `bookmark`
 --
 ALTER TABLE `bookmark`
-  MODIFY `BID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `BID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- 使用表AUTO_INCREMENT `user`
 --
 ALTER TABLE `user`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;COMMIT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
