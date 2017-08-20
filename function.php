@@ -11,4 +11,4 @@ function redirect($url)
 function preEmail($email){
     $preEmail = explode("@",$email);
     return $preEmail[0];
-}
+} 
