@@ -1,30 +1,13 @@
 <?php
 require('common.php');
-$username='admin';
-$b = new Bookmark();
-$bookmaks=$b->getBookmark($username);
 
-if (empty($bookmaks)) {
-  # code...
-  echo "没有数据！";
-} else {
-  # code...
-  // var_dump($bookmaks);
+//$email = 'hahaxo@126.com'; $emailArr = explode("@",$email); echo $emailArr[0];
+$email = '1212hahaxocom';
+$p=preEmails($email);
+echo $p;
 
-
-foreach($bookmaks as $data)
-{
-  echo '<li><a href="'.$data["URL"].'" class="title" target="_blank">';
-  echo $data["TITLE"];
-  echo '</a>';
-  echo '<div class="meta">';
-  echo $data["TIME"];
-  echo '</div>';
-  echo '<div class="summary">';
-  echo $data["DESCRIPTION"];
-  echo '</div>';
-  echo '</li>';
-}
-
-
+//参数：完整的Email地址，返回@前的字符串；
+function preEmails($email){
+$preEmail = explode("@",$email);
+return $preEmail[0];
 }

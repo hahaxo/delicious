@@ -25,7 +25,7 @@ $bookmaks=$b->getBookmark($username);
         <p class="weui-media-box__desc"><?php echo $data["DESCRIPTION"]; ?></p>
         <ul class="weui-media-box__info">
           <li class="weui-media-box__info__meta"><?php echo $data["TIME"]; ?></li>
-          <li class="weui-media-box__info__meta"><?php echo $data["AUTHOR"]; ?></li>
+          <li class="weui-media-box__info__meta"><?php echo preEmail($data["AUTHOR"]); ?></li>
           <!-- <li class="weui-media-box__info__meta weui-media-box__info__meta_extra"></li> -->
         </ul>
       </div>

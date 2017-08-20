@@ -9,7 +9,7 @@
           echo "<a href='login.php?action=logout'>logout</a>";
         } else {
           # code...
-          echo "<a href='login.php'>login</a>";
+          echo "<a href='javascript:void(0);'>Howto</a>".' &nbsp;&nbsp;&nbsp;&nbsp; '."<a href='register.php'>Register</a>".' &nbsp;&nbsp;&nbsp;&nbsp; '."<a href='login.php'>Login</a>";
         }
 
       ?>
