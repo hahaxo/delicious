@@ -1,30 +1,8 @@
 <?php
-require('common.php');
-
-//$email = 'hahaxo@126.com'; $emailArr = explode("@",$email); echo $emailArr[0];
-$email = '1212hahaxocom';
-$p=preEmails($email);
-echo $p;
-
-//参数：完整的Email地址，返回@前的字符串；
-function preEmails($email){
-$preEmail = explode("@",$email);
-return $preEmail[0];
-}
-
-
-
-
-// index backup core Logic
-if (isset($_GET['username'])) {
-  $username=$_GET['username'];
-}else {
-  $username='*';
-}
+$username=$_SESSION['username'];
 $b = new Bookmark();
 $bookmaks=$b->getBookmark($username);
-
-
+?>
 <div class="container">
  <div class="card">
   <div class="weui-panel">
