@@ -6,6 +6,7 @@ body {
 /*Link*/
 .card a,.card a:visited{color: #586C94;text-decoration: none;}
 .card a:hover{text-decoration: underline;}
+.nav{font-size: 12px;}
 .nav a,.nav a:visited{ font-size:12px;color: #586C94;text-decoration: none;}
 .nav a:hover{text-decoration: underline;}
 .main_footer a,.main_footer a:visited{color: #586C94;text-decoration: none;}

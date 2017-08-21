@@ -8,13 +8,4 @@ if (isset($_SESSION['access']) && $_SESSION['access']==true) {
 }
 ?>
 
-
-
-
-
-
-
-
-
-
 <?php require('index-copyright.php');require('footer.php') ?>

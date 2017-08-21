@@ -4,8 +4,8 @@
     <div class="menu">
       <?php
         if (isset($_SESSION['username'])) {
-          # code...
-          echo "<a href='?username=".$_SESSION['username']."'>".$_SESSION['username'].'</a>' .'&nbsp;&nbsp;&nbsp;&nbsp;';
+          // echo "<a href='?username=".$_SESSION['username']."'>".$_SESSION['username'].'</a>' .'&nbsp;&nbsp;&nbsp;&nbsp;';
+          echo $_SESSION['username'].'&nbsp;&nbsp;&nbsp;&nbsp;';
           echo "<a href='login.php?action=logout'>logout</a>";
         } else {
           # code...
