@@ -1,6 +1,6 @@
 <?php
 /**
- *
+ * [User description]
  */
 class User
 {

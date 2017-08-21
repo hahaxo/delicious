@@ -11,3 +11,11 @@ function preEmails($email){
 $preEmail = explode("@",$email);
 return $preEmail[0];
 }
+
+
+$url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+
+echo "<br />";
+echo $_SERVER['PHP_SELF'];
+echo "<br />";
+echo $url;

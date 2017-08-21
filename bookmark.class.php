@@ -1,6 +1,6 @@
 <?php
 /**
- *
+ * [Bookmark description]
  */
 class Bookmark
 {
@@ -23,6 +23,7 @@ class Bookmark
   {
     return $this->$name = $value;
   }
+
 
   public function getBookmark($username)
   {
