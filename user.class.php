@@ -62,13 +62,18 @@ class User
     public static function autoLogin()
     {
         global $database;
-        $user = new User();
-        $user->username = @$_COOKIE['username'];
-        $user->password = @$_COOKIE['password'];
-        $result = $database->has("user", ["AND" => ["USERNAME" => $user->username, "PASSWORD" => sha1($user->password)]]);//Return: [boolean] 返回 TRUE 或者 FALSE.
+
+        $username = $_COOKIE['username'];
+        $password = $_COOKIE['password'];
+        $result = $database->has("user", ["AND" => ["USERNAME" => $username, "PASSWORD" => $password]]);//Return: [boolean] 返回 TRUE 或者 FALSE.
+        //$_SESSION['access']='3333';
+//echo $_SESSION['access'];
+        var_dump($result);
         if ($result) {
-            $_SESSION['username'] = $_POST['username'];
-            $_SESSION['access'] = true;
+            $_SESSION['username'] = $_COOKIE['username'];
+            $_SESSION['access'] = '111';
+        }else{
+            $_SESSION['access'] = '2222';
         }
     }
 

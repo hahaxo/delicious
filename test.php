@@ -1,5 +1,4 @@
-<?php
-require('common.php');
+<?php require('header.php');require('nav.php');
 
 //$email = 'hahaxo@126.com'; $emailArr = explode("@",$email); echo $emailArr[0];
 $email = '1212hahaxocom';
@@ -21,9 +20,10 @@ echo $_SERVER['PHP_SELF'];
 echo "<br />";
 echo $url;
 echo "<br />";
-echo "<br />";
+echo $_SESSION['username'];
 echo "<br />";
 
-$y = '%2Fdelicious%2Fadd.php%3Furl%3Dhttp%253A%252F%252Flocalhost%252Fdelicious%252Findex.php%26description%3D%26title%3DDelicious%2520Bookmark';
-$y = urldecode($y);
-echo $y;
+
+////echo $_SESSION['username'];
+//echo "<br />";
+//echo $_COOKIE['username'];
