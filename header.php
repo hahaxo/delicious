@@ -17,6 +17,8 @@
   <meta name="msapplication-config" content="http://hahaxo.com/delicious/img/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
   <!-- WEUI CSS -->
+  <link rel="alternate" type="application/rss+xml" title="Delicious Bookmark RSS" href="rss.php"/>
+  <!-- WEUI CSS -->
   <link rel="stylesheet" href="http://res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
