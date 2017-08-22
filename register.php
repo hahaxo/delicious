@@ -16,7 +16,7 @@ if (empty($_POST['username']) || empty($_POST['password'])) {
 //        $GLOBALS['register']['form'] = '注册成功';
         setcookie('username', $_POST['username'], time() + 60 * 60 * 24 * 30 * 6);//设置时效6个月,6个月后这个cookie失效
         setcookie('password', sha1($_POST['password']), time() + 60 * 60 * 24 * 30 * 6);
-        redirect('test.php');
+        redirect('index.php');
     }
 
 }

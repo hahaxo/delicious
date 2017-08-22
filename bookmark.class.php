@@ -25,7 +25,7 @@ class Bookmark
   }
 
 
-  public function getBookmark($username)
+  public function getBookmark($username='*')
   {
     # code...
     global $database;
