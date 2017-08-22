@@ -1,4 +1,4 @@
-<?php require 'common.php';session_start();?>
+<?php require 'common.php';?>
 <!DOCTYPE html>
 <html lang="en">
 

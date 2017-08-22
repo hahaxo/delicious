@@ -1,5 +1,4 @@
 <?php
-
 /**
  * [User description]
  */
@@ -10,7 +9,6 @@ class User
 
     function __construct()
     {
-        //  session_start();
         $this->username = null;
         $this->password = null;
     }
@@ -62,18 +60,15 @@ class User
     public static function autoLogin()
     {
         global $database;
-
-        $username = $_COOKIE['username'];
-        $password = $_COOKIE['password'];
+        @$username = $_COOKIE['username'];
+        @$password = $_COOKIE['password'];
         $result = $database->has("user", ["AND" => ["USERNAME" => $username, "PASSWORD" => $password]]);//Return: [boolean] 返回 TRUE 或者 FALSE.
-        //$_SESSION['access']='3333';
-//echo $_SESSION['access'];
-        var_dump($result);
+
         if ($result) {
-            $_SESSION['username'] = $_COOKIE['username'];
-            $_SESSION['access'] = '111';
+            $_SESSION['username'] = $username;
+            $_SESSION['access'] = TRUE;
         }else{
-            $_SESSION['access'] = '2222';
+            $_SESSION['access'] = FALSE;
         }
     }
 

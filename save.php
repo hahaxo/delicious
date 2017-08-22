@@ -1,6 +1,6 @@
 <?php
 require 'common.php';
-session_start();
+
 User::auth();
 if (isset($_POST['submit'])&&!empty($_POST["title"])&&!empty($_POST["url"])) {
   # code...
