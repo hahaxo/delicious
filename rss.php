@@ -13,7 +13,7 @@ if (isset($_GET['u'])) {
 
 //$bookmaks=$b->getBookmark($username);
 
-$RSS= new RSS("My Delicious Bookmarks","http://hahaxo.com","Bookmark Feeds","RSS频道图标");
+$RSS= new RSS("My Delicious Bookmarks","http://hahaxo.com","Bookmark Feeds","http://hahaxo.com/img/favicon.png");
 // $RSS->AddItem("日志的标题","日志的地址","日志的摘要","2017-08-21 14:56:03");
 
 
