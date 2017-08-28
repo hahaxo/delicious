@@ -12,3 +12,13 @@ function preEmail($email){
     $preEmail = explode("@",$email);
     return $preEmail[0];
 }
+
+//rss日期要符合 RFC-822 规范
+function updateAtFormat($time)
+{
+	# code...
+	date_default_timezone_set('PRC');//设置为中华人民共和国
+	$time=strtotime($time);
+	$updateAtFormat = date('D, d M Y H:i:s O', $time);
+  return $updateAtFormat;
+}

@@ -30,7 +30,7 @@ class RSS
      * RSS频道所使用的语言
      * +----------------------------------------------------------
      */
-    protected $language = 'zh_CN';
+    protected $language = 'zh-CN';
     /**
      * +----------------------------------------------------------
      * RSS文档创建日期，默认为今天
@@ -66,8 +66,11 @@ class RSS
         $this->channel_link = $link;
         $this->channel_description = $description;
         $this->channel_imgurl = $imgurl;
-        $this->pubDate = Date('Y-m-d H:i:s', time());
-        $this->lastBuildDate = Date('Y-m-d H:i:s', time());
+        date_default_timezone_set('PRC');//设置为中华人民共和国
+        // $this->pubDate = Date('Y-m-d H:i:s', time());
+        // $this->lastBuildDate = Date('Y-m-d H:i:s)', time());
+        $this->pubDate = date('D, d M Y H:i:s O', time());
+        $this->lastBuildDate = date('D, d M Y H:i:s O', time());
     }
 
     /**
@@ -141,7 +144,8 @@ class RSS
         for ($i = 0; $i < count($this->items); $i++) {
             $rss .= "<item>\r\n";
             $rss .= "<title><![CDATA[{$this->items[$i]['title']}]]></title>\r\n";
-            $rss .= "<link>{$this->items[$i]['link']}</link>\r\n";
+            $rss .= "<link><![CDATA[{$this->items[$i]['link']}]]></link>\r\n";
+            // $rss .= "<link>{$this->items[$i]['link']}</link>\r\n";
             $rss .= "<description><![CDATA[{$this->items[$i]['description']}]]></description>\r\n";
             $rss .= "<pubDate>{$this->items[$i]['pubDate']}</pubDate>\r\n";
             $rss .= "</item>\r\n";

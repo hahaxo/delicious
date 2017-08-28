@@ -18,3 +18,8 @@ test($_GET['u']);
 } else {
 test();
 }
+
+echo "<br />";
+$time='2017-08-22 12:48:36';
+
+echo updateAtFormat($time);

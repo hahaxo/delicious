@@ -19,7 +19,7 @@ $RSS= new RSS("My Delicious Bookmarks","http://hahaxo.com","Bookmark Feeds","htt
 
 
 foreach($bookmaks as $data){
-  $RSS->AddItem($data["TITLE"],$data["URL"],$data["DESCRIPTION"],$data["TIME"]);
+  $RSS->AddItem($data["TITLE"],$data["URL"],$data["DESCRIPTION"],updateAtFormat($data["TIME"]));
 }
 
 $RSS->Display();//输出RSS内容
