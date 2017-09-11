@@ -72,4 +72,22 @@ body {
 .weui-media-box__info{ margin-top:8px;}
 .weui-media-box__desc{-webkit-line-clamp:4}
 
-/*Responsive Layout*/
+/* intro */
+.intro{ width: 950px; min-height: 200px; margin: 0 auto;}
+.intro>div{ margin-bottom: 160px}
+.intro>div:last-child{ margin-bottom: 0}
+.intro img{ width: 950px;}
+
+.intro_item{ position: relative;}
+.bookmarkletarea{ position: absolute; top: 210px; right: 160px}
+.bookmarklet{ display: block;width: 160px; height: 40px; text-align: center;
+/* Rectangle 6: */
+background: #DFFBE3;
+border: 1px dashed #53A221;
+border-radius: 4px;
+/* + Add Delicious: */
+font-family: HelveticaNeue-Bold;
+font-size: 18px;
+color: #000000;
+letter-spacing: 0;
+line-height: 40px;}
