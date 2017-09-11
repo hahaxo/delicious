@@ -64,7 +64,6 @@ body {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
-.splash{ background: url('../img/splash.jpg'); background-size: cover; height: 640px; margin-top: -24px;}
 
 /*Rewrite weui*/
 .weui-panel{ background-color: transparent;}
@@ -81,6 +80,7 @@ body {
 .intro_item{ position: relative;}
 .bookmarkletarea{ position: absolute; top: 210px; right: 160px}
 .bookmarklet{ display: block;width: 160px; height: 40px; text-align: center;
+cursor:move;
 /* Rectangle 6: */
 background: #DFFBE3;
 border: 1px dashed #53A221;

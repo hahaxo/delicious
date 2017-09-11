@@ -6,7 +6,8 @@ body {
 /*Link*/
 .card a,.card a:visited{color: #586C94;text-decoration: none;}
 .card a:hover{text-decoration: underline;}
-.nav a,.nav a:visited{color: #586C94;text-decoration: none;}
+.nav{font-size: 12px;}
+.nav a,.nav a:visited{ font-size:12px;color: #586C94;text-decoration: none;}
 .nav a:hover{text-decoration: underline;}
 .main_footer a,.main_footer a:visited{color: #586C94;text-decoration: none;}
 .main_footer a:hover{text-decoration: underline;}
@@ -79,6 +80,7 @@ body {
 .intro_item{ position: relative;}
 .bookmarkletarea{ position: absolute; top: 210px; right: 160px}
 .bookmarklet{ display: block;width: 160px; height: 40px; text-align: center;
+cursor:move;
 /* Rectangle 6: */
 background: #DFFBE3;
 border: 1px dashed #53A221;
