@@ -7,7 +7,7 @@
           echo $_SESSION['username'].'&nbsp;&nbsp;&nbsp;&nbsp;';
           echo "<a href='login.php?action=logout'>logout</a>";
         } else {
-          echo "<a href='javascript:void(0);'>Howto</a>".' &nbsp;&nbsp;&nbsp;&nbsp; '."<a href='register.php'>Register</a>".' &nbsp;&nbsp;&nbsp;&nbsp; '."<a href='login.php'>Login</a>";
+          echo "<a href='about.php'>Howto</a>".' &nbsp;&nbsp;&nbsp;&nbsp; '."<a href='register.php'>Register</a>".' &nbsp;&nbsp;&nbsp;&nbsp; '."<a href='login.php'>Login</a>";
         }
 
       ?>

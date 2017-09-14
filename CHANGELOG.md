@@ -2,8 +2,11 @@
 
 ### 2017-08-11
 
-- Optimized:homepage add introduction for not login
-- Optimized:the mylist is empty for new user
+- 【修复】未登录时，介绍页
+- 【优化】新用户第一次登录后的收藏引导页
+- 【优化】同一 URL 重复收藏2次
+- 【新增】RSS 隐私设置
+- 【新增】书签导出 导入
 
 
 
