@@ -91,3 +91,6 @@ font-size: 18px;
 color: #000000;
 letter-spacing: 0;
 line-height: 40px;}
+
+.edit{ display: none;}
+.weui-media-box__info:hover .edit{ display: block;}
