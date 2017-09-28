@@ -6,7 +6,7 @@
 
 <div data-note-content="" class="show-content">
   <h2>介绍</h2>
-  <p>从2009年1月开始，我在<a href="https://del.icio.us" target="_blank">https://del.icio.us</a> 上面收藏了超过800+ 的网址 URL。虽然这个服务被转售了4次，但依然可以提供稳定切高速的服务。直到今年7月被 <a href="http://pinbord.in" target="_blank">pinbord.in</a> 收购后，通知会被下线终止服务。</p>
+  <p>从2009年1月开始，我在<a href="https://del.icio.us" target="_blank">https://del.icio.us</a> 上面收藏了超过800+ 的网址 URL。虽然这个服务被转售了4次，但依然可以提供稳定切高速的服务。直到今年7月被 <a href="http://pinboard.in" target="_blank">pinboard.in</a> 收购后，通知会被下线终止服务。</p>
   <p>在接下来的时间通过各种比较试用，最后比较满意的是 pocket.com 和 pinboard.in。可是这2个服务也有不符合我自身需求的点：pocket.com 在我常用的网络下访问速度始终很慢；pinboard.in取消了终身付费制，改成了年付费的形式。并且我使用网址收藏的诉求比较聚焦，就是只收藏站点。对于文章的 read later ，我日常使用 instapaper。</p>
   <p>最后，只好根据自己的需求，以我个人使用习惯写了这个网站收藏夹（网址收藏）服务，用来代替被下线的<a href="https://del.icio.us" target="_blank">https://del.icio.us</a> 。在稳定性和持久性方面，我会持续完善。</p>
   <h2>数据是属于你的</h2>
