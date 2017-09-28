@@ -7,6 +7,16 @@ $bookmaks=$b->getBookmark($username);
  <div class="card">
   <div class="weui-panel">
     <div class="weui-panel__bd">
+
+
+        <?php if (empty($bookmaks)) {
+          echo '<div class="weui-media-box weui-media-box_text empty">';
+          echo '您还没有收藏网址，<a href="about.php#usage">查看如何使用……</a>';
+          echo '</div>';
+        }  ?>
+
+
+
 <?php foreach($bookmaks as $data){ ?>
       <div class="weui-media-box weui-media-box_text">
         <h4 class="weui-media-box__title"><a href="<?php echo $data['URL']; ?>" target="_blank"><?php echo $data["TITLE"]; ?></a></h4>

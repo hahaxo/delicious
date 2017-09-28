@@ -22,3 +22,20 @@ function updateAtFormat($time)
 	$updateAtFormat = date('D, d M Y H:i:s O', $time);
   return $updateAtFormat;
 }
+
+/**
+  * 强制下载文件
+  * @param string $file 文件路径
+*/
+function force_download($file){
+    if ((isset($file)) && (file_exists($file))) {
+        header("Content-length: ".filesize($file));
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment;filename="'.basename($file).'"');
+        readfile($file); }
+    else {
+        echo "No file selected";
+    }
+}
+//使用示例
+// force_download('1.jpg');

