@@ -20,7 +20,9 @@ $bookmaks=$b->getBookmark($username);
 <?php foreach($bookmaks as $data){ ?>
       <div class="weui-media-box weui-media-box_text">
         <h4 class="weui-media-box__title"><a href="<?php echo $data['URL']; ?>" target="_blank"><?php echo $data["TITLE"]; ?></a></h4>
-        <p class="weui-media-box__desc"><?php echo $data["DESCRIPTION"]; ?></p>
+        <?php if (!empty($data["DESCRIPTION"])): ?>
+          <p class="weui-media-box__desc"><?php echo $data["DESCRIPTION"]; ?></p>
+        <?php endif; ?>
         <ul class="weui-media-box__info">
           <li class="weui-media-box__info__meta"><?php echo $data["TIME"]; ?></li>
           <li class="weui-media-box__info__meta"><?php echo preEmail($data["AUTHOR"]); ?></li>
