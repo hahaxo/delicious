@@ -6,9 +6,9 @@ require 'rss.class.php';//引入RSS PHP类
 $b = new Bookmark();
 if (isset($_GET['u'])) {
   $username=$_GET['u'];
-  $bookmaks=$b->getBookmark($username);
+  $bookmaks=$b->getRSS($username);
 } else {
-  $bookmaks=$b->getBookmark();
+  $bookmaks=$b->getRSS();
 }
 
 //$bookmaks=$b->getBookmark($username);

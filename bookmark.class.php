@@ -38,7 +38,19 @@ class Bookmark
 
   }
 
+  public function getRSS($username='*')
+  {
+    # code...
+    global $database;
+    //return $datas = $database->select("bookmark", "*",["AUTHOR" => "yangpeiyuan","ORDER" => ["BID" => "DESC"]]);
+    $count = $database->count("bookmark");
+    if ($username!='*') {
+      return $datas = $database->select("bookmark", "*",["AND"=>["AUTHOR" => $username,"BID[<>]"=> [$count-20,$count]],"ORDER" => ["BID" => "DESC"]]);
+    } else {
+      return $datas = $database->select("bookmark", "*",["ORDER" => ["BID" => "DESC"]]);
+    }
 
+  }
 
 
 
